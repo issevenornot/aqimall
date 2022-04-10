@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.aqi.aqimail</groupId>
+    <artifactId>aqimail</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>aqimail</name>
+    <description>阿七的商城</description>
+    <packaging>pom</packaging>
+    <modules>
+        <module>aqimail-coupon</module>
+        <module>aqimail-member</module>
+        <module>aqimail-order</module>
+        <module>aqimail-product</module>
+        <module>aqimail-ware</module>
+    </modules>
+
+
+</project>
