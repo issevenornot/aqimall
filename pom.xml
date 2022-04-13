@@ -17,6 +17,7 @@
         <module>renren-fast</module>
         <module>renren-generator</module>
         <module>aqimall-common</module>
+        <module>aqimall-gateway</module>
     </modules>
 
 
