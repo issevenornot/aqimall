@@ -16,11 +16,19 @@ spring:
           predicates:
             - Path=/api/product/**
           filters:
+#            api/下的所有请求路由到aqimail-product,并将/api/重写为/
             - RewritePath=/api/(?<segment>.*), /$\{segment}
+        - id: third_party_route
+          uri: lb://aqimail-third-party
+          predicates:
+            - Path=/api/thirdparty/**
+          filters:
+            - RewritePath=/api/thirdparty/(?<segment>.*), /$\{segment}
         - id: admin_route
           uri: lb://renren-fast
           predicates:
             - Path=/api/**
+#            api/下的所有请求路由到aqimail-product,并将/api/重写成/renren-fast/
           filters:
             - RewritePath=/api/(?<segment>.*), /renren-fast/$\{segment}
 #http://localhost:88/api/captcha.jpg  -->   http://localhost:8080/renren-dast/captcha.jpg
