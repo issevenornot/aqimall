@@ -19,7 +19,7 @@ spring:
 #            api/下的所有请求路由到aqimail-product,并将/api/重写为/
             - RewritePath=/api/(?<segment>.*), /$\{segment}
 
-        - id: aqimail-member
+        - id: aqimail_member
           uri: lb://aqimail-member
           predicates:
             - Path=/api/member/**

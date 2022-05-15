@@ -1,3 +1,6 @@
+feign:
+  httpclient:
+    connection-timeout: 50000
 spring:
   datasource:
     username: root
@@ -15,7 +18,8 @@ spring:
         endpoint: oss-cn-guangzhou.aliyuncs.com
   application:
     name: aqimail-product
-
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
   global-config:
@@ -25,3 +29,13 @@ mybatis-plus:
       logic-not-delete-value: 0
 server:
   port: 11100
+logging:
+  level:
+    com.aqi.aqimail: debug
+
+#暴露所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

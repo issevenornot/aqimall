@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @Author koi
@@ -33,6 +34,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * TableLogic
  * private Integer deleted;
  * */
+@EnableFeignClients(basePackages = "com.aqi.aqimail.product.feign")
 @MapperScan("com.aqi.aqimail.product.dao")
 @SpringBootApplication
 @EnableDiscoveryClient
