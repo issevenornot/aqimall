@@ -9,7 +9,8 @@ package com.aqi.common.exception;
 public enum BizCodeEnume {
     //10001 代表商品格式异常等
     UNKNOWN_EXCEPTION(10000,"系统未知异常"),
-    VALID_EXCEPTION(10001,"参数格式检验失败");
+    VALID_EXCEPTION(10001,"参数格式检验失败"),
+    PRODUCT_UP_EXCEPTION(11000,"商品上架异常");
     private final int code;
     private final String msg;
     BizCodeEnume(int code,String msg){

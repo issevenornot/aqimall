@@ -1,6 +1,13 @@
 feign:
   httpclient:
-    connection-timeout: 50000
+    hc5:
+      socket-timeout: 20
+      enabled: true
+      socket-timeout-unit: days
+    connection-timeout: 20000
+    connection-timer-repeat: 20000
+    time-to-live: 20000
+
 spring:
   datasource:
     username: root
@@ -20,6 +27,9 @@ spring:
     name: aqimail-product
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
+  thymeleaf:
+    cache: false
+
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
   global-config:
