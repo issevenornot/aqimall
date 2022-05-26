@@ -50,3 +50,7 @@ spring:
           filters:
             - RewritePath=/api/(?<segment>.*), /renren-fast/$\{segment}
 #http://localhost:88/api/captcha.jpg  -->   http://localhost:8080/renren-dast/captcha.jpg
+        - id: aqimail_host_route
+          uri: lb://aqimail-product
+          predicates:
+            - Host=**.aqimall.com
