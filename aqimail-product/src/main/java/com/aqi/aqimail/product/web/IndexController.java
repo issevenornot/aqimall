@@ -24,7 +24,7 @@ public class IndexController {
     @GetMapping({"/","/index.html"})
     public String indexPage(Model model){
         //查出所有一级分类
-        List<CategoryEntity> categoryEntityEList =  categoryService.getLLevel1Categorys();
+        List<CategoryEntity> categoryEntityEList =  categoryService.getLevel1Categorys();
         model.addAttribute("categoryEntities",categoryEntityEList);
         return "index";
     }

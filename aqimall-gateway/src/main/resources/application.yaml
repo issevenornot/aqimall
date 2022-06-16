@@ -53,4 +53,8 @@ spring:
         - id: aqimail_host_route
           uri: lb://aqimail-product
           predicates:
-            - Host=**.aqimall.com
+            - Host=aqimall.com
+        - id: aqimail_search_route
+          uri: lb://aqimail-search
+          predicates:
+            - Host=search.aqimall.com
